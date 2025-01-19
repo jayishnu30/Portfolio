@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -13,21 +13,15 @@ function App() {
     <Router>
       <div className="min-h-screen bg-gray-900 text-white">
         <Navbar />
-        <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <About />
-              <Experience />
-              <section id="projects" className="min-h-screen py-20 relative">
-                <Projects />
-              </section>
-              <section id="contact" className="min-h-screen py-20 relative">
-                <Contact />
-              </section>
-            </>
-          } />
-        </Routes>
+        <Hero />
+        <About />
+        <Experience />
+        <section id="projects" className="min-h-screen py-20 relative">
+          <Projects />
+        </section>
+        <section id="contact" className="min-h-screen py-20 relative">
+          <Contact />
+        </section>
         <Footer />
       </div>
     </Router>
