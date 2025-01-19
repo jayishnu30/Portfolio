@@ -11,24 +11,17 @@ import Footer from './components/Footer';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-900 text-gray-100">
+      <div className="min-h-screen bg-gray-900 text-white">
         <Navbar />
-        <main className="relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900 pointer-events-none" />
-          <Hero />
-          <section id="about" className="min-h-screen py-20 relative">
-            <About />
-          </section>
-          <section id="experience" className="min-h-screen py-20 relative">
-            <Experience />
-          </section>
-          <section id="projects" className="min-h-screen py-20 relative">
-            <Projects />
-          </section>
-          <section id="contact" className="min-h-screen py-20 relative">
-            <Contact />
-          </section>
-        </main>
+        <Hero />
+        <About />
+        <Experience />
+        <section id="projects" className="min-h-screen py-20 relative">
+          <Projects />
+        </section>
+        <section id="contact" className="min-h-screen py-20 relative">
+          <Contact />
+        </section>
         <Footer />
       </div>
     </Router>
